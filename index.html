@@ -13,17 +13,24 @@
   <body>
     <div class="card">
       <header class="header">
-        <img 
-          class="prod-img"
+        <!-- <source media="(max-width: 480px)" srcset="./images/image-product-mobile.jpg">
+        <source media="(max-width: 768px)" srcset="./images/image-product-desktop.jpg"> -->
+        <img class="prod-img" 
           src="./images/image-product-mobile.jpg" 
-          alt="perfume"
-          >
-          <!-- width="686"
+          alt="perfume"        
+          width="686"
           height="480"
           loading="lazy"
           decoding="async"
-          srcset="./images/image-product-mobile.jpg 686,
-            ./images/image-product-desktop.jpg 600w 900h" -->
+          srcset="
+            ./images/image-product-mobile.jpg 768w,
+            ./images/image-product-desktop.jpg 1800w
+          "
+          sizes="
+            (max-width: 768px)25vw, 
+            (min-width: 769px) 100vw
+          "
+        >
       </header>
       <main class="main">
         <p class="prod-type">PERFUME</p>
