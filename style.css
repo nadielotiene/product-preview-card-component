@@ -11,21 +11,22 @@ body {
     justify-content: center;
     align-items: center;
     min-width: 100%;
-    min-height: 100dvh;
+    min-height: 100vh;
 }
 
 .card {
     background-color: hsl(0, 0%, 100%);
     border-radius: 1rem;
     margin: 2rem;
-    height: 100%;
+    overflow: hidden;
 }
 
 .card, .prod-img {
     max-width: 20rem;
+    height: 100%;
     border-top-left-radius: 1rem; 
     border-top-right-radius: 1rem;
-    height: 100%;
+    object-fit: cover;
 }
 
 .main {
@@ -45,12 +46,10 @@ p, .cart-btn {
     line-height: 1.4rem;
 }
 
-h1, .sale-price {
+.prod-name, .sale-price {
     color: hsl(212, 21%, 14%);
     font-family: "Fraunces", serif;
-    font-variation-settings:
-    "SOFT" 0,
-    "WONK" 0;
+    font-variation-settings: "SOFT" 0, "WONK" 0;
     line-height: 2.1rem;
     padding: .7rem 0 1rem;
 }
@@ -79,6 +78,7 @@ h1, .sale-price {
     text-align: center;
     border-radius: .5rem;
     padding: .8rem;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .cart-btn:hover {
@@ -103,21 +103,19 @@ h1, .sale-price {
         flex-direction: row;
         justify-content: center;
         max-width: 38rem;
-        /* height: 30rem; */
+    }
+
+    .prod-img {
+        border-top-right-radius: 0rem;
+        border-bottom-left-radius: 1rem;
+        width: 19rem;
     }
 
     .main {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        padding: rem;
-    }
-    
-    .prod-img {
-        border-top-right-radius: 0rem;
-        border-bottom-left-radius: 1rem;
-        width: 19rem;
-        /* height: 100%; */
+        padding: 2rem;
     }
 
     p {
